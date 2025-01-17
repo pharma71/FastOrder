@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="plugin.xsd">
+    <administration>
+        <path>Resources/app/administration</path>
+    </administration>
+    <storefront>
+        <path>Resources/app/storefront</path>
+    </storefront>
+</plugin>

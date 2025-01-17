@@ -1,0 +1,36 @@
+{
+    "name": "fast-order/fast-order",
+    "authors": [
+        {
+            "name": "Kristian Knorr",
+            "email": "kknorr71@gmail.com",
+            "role": "Developer"
+        }  
+    ],
+    "description": "FastOrder plugin",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "*",
+        "shopware/administration": "*",
+        "shopware/storefront": "*"
+    },
+    "extra": {
+        "shopware-plugin-class": "FastOrder\\FastOrder",
+        "label": {
+            "de-DE": "FastOrder plugin",
+            "en-GB": "FastOrder"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "FastOrder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FastOrder\\Tests\\": "tests/"
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="FastOrder\Storefront\Controller\FastOrderController" public="true">
+            <call method="setContainer">
+                <argument type="service" id="service_container"/>              
+            </call>
+            <!-- CartService injizieren -->
+            <argument type="service" id="Shopware\Core\Checkout\Cart\SalesChannel\CartService" />
+           <!-- Produktrepository injizieren -->
+            <argument type="service" id="product.repository" />
+            <!-- Twig injizieren -->
+            <argument type="service" id="twig" />
+            <!-- FastOrderService injizieren -->
+            <argument type="service" id="FastOrder\Service\FastOrderService" />
+            <tag name="controller.service_arguments" />
+        </service>
+
+        <!-- Using the tag, Shopware automatically registers an EntityDefinition and EntityRepository for the entity -->
+        <service id="FastOrder\Entity\FastOrderEntity" public="true">
+            <tag name="shopware.entity"/>
+        </service>
+        <service id="FastOrder\Entity\FastOrderDefinition">
+            <tag name="shopware.entity.definition"/>
+        </service>
+
+        <service id="FastOrder\Core\Content\Example\SalesChannel\ExampleRoute">
+            <argument type="service" id="product.repository"/>
+        </service>
+
+        <service id="FastOrder\Service\FastOrderService" public="true">
+            <argument type="service" id="Shopware\Core\Framework\DataAbstractionLayer\DefinitionInstanceRegistry"/>
+            <argument type="service" id="monolog.logger" /> 
+            <argument type="service" id="Doctrine\DBAL\Connection" /> 
+        </service>
+
+    </services>
+</container>

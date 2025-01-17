@@ -1,0 +1,11 @@
+{
+    "views": [
+        "@FastOrder/Resources/views"
+    ],
+    "style": [
+        "src/Resources/app/storefront/src/scss/fast-order.scss"
+    ],
+    "script": [
+        "src/Resources/app/storefront/src/js/fast-order.js"
+    ]
+}

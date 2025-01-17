@@ -1,0 +1,10 @@
+{"style": [
+        "@Storefront",
+        "app/storefront/src/scss/base.scss",
+		"app/storefront/src/scss/fast-order.scss"
+    ],
+    "script": [
+        "@Storefront",
+        "app/storefront/dist/storefront/js/fast-order.js"
+    ]
+}    

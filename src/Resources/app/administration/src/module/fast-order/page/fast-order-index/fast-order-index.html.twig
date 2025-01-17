@@ -1,0 +1,60 @@
+<sw-page style="height: 100%; border: 1px solid #D8DDE6;">
+
+  <template #search-bar>
+    <sw-search-bar>
+    </sw-search-bar>
+  </template>
+
+  <template #smart-bar-header>
+    <h2>Fast Order Admin</h2>
+    <p>Manage all fast orders here.</p>
+  </template>
+
+  <template #smart-bar-actions>
+    <sw-button v-show="env" variant="primary" @click="loadOrders">
+        Load Fast Orders
+    </sw-button>
+  </template>
+
+  <template #content>
+  {% block fast_order_table %}
+    <div class="fast-order-admin">
+
+      <div v-if="loading" class="loading">Loading...</div>
+      
+      <table v-if="!loading && orders.length" class="sw-data-grid">
+          <thead>
+              <tr>
+                  <th>Order ID</th>
+                  <th>Product</th>
+                  <th>Quantity</th>
+                  <th>Date</th>
+                  <th>Comment</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr v-for="(order, index) in orders" :key="order.id">
+                  <td>{{ order.attributes.sessionId }}</td>
+                  <td>{{ order.attributes.productNumber }}</td>
+                  <td>{{ order.attributes.quantity }}</td>
+                  <td>{{ order.attributes.createdAt }}</td>
+                  <td>
+                    <textarea v-model="order.comment" placeholder="Add a comment..."></textarea>
+                  </td>
+                  <td>
+                      <sw-button variant="primary" @click="saveComment(index)">Save Comment</sw-button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      
+      <div v-if="!loading && !orders.length && env" class="no-orders">
+          <p>No fast orders found.</p>
+      </div>
+      <div v-if="!loading && !orders.length && !env" class="no-orders">
+          <p>Please configure your plugin first.</p>
+      </div>
+    </div>
+  {% endblock %}
+  </template>
+</sw-page>

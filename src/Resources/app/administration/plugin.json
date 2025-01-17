@@ -1,0 +1,18 @@
+{
+  "name": "FastOrderAdminModule",
+  "label": {
+    "en-GB": "Fast Order Admin Module",
+    "de-DE": "Schnellbestellung Admin-Modul"
+  },
+  "description": {
+    "en-GB": "Admin module for managing fast orders",
+    "de-DE": "Admin-Modul zur Verwaltung von Schnellbestellungen"
+  },
+  "author": "Kristian Knorr",
+  "license": "MIT",
+  "active": true,
+  "version": "1.0.0",
+  "js": [
+    "src/main.js"
+  ]
+}

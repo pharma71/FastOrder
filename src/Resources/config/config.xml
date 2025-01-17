@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Api Configuration - Access to Admin Api</title>
+        <title lang="de-DE">Api Konfiguration- Zugang zur Admin Api</title>
+
+        <input-field type="password">
+            <name>adminaccesskey</name>
+            <copyable>true</copyable>
+            <label>Admin Access key ID</label>
+            <label lang="de-DE">Admin Access Key ID</label>
+            <placeholder>SWIAAWK2SUVXRXPJRNB5CHG0BQ</placeholder>
+            <placeholder lang="de-DE">SWIAAWK2SUVXRXPJRNB5CHG0BQ</placeholder>
+            <helpText>You have to be admin to generate your Admin Api access credentials at Settings-System-Integrations</helpText>
+            <helpText lang="de-DE">Als Admin können Sie über Einstellungen-System-Integrations Ihren Admin Api Zugang erstellen.</helpText>
+        </input-field>
+
+        <input-field type="password">
+            <name>adminaccesssecret</name>
+            <copyable>true</copyable>
+            <label>Admin Secret Access Key</label>
+            <label lang="de-DE">Admin Secret Access Key</label>
+            <placeholder>d2s2SG9jN7BEdDdzMUY2dkZDMjdhV5h0bVRnZEF9UXpRRzhqam1</placeholder>
+            <placeholder lang="de-DE">d2s2SG9jN7BEdDdzMUY2dkZDMjdhV5h0bVRnZEF9UXpRRzhqam1</placeholder>
+            <helpText>You have to be admin to generate your Admin Api access credentials at Settings-System-Integrations</helpText>
+            <helpText lang="de-DE">Als Admin können Sie über Einstellungen-System-Integrations Ihren Admin Api Zugang erstellen.</helpText>
+        </input-field>
+  
+    </card>
+</config>
+
+

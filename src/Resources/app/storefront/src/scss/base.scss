@@ -1,0 +1,9 @@
+// <plugin root>/src/Resources/app/storefront/src/scss/base.scss
+@import 'fast-order.scss';
+@import 'abstract/variables.scss';
+
+
+.testdiv {
+    background-color: red!important;
+    color: green;
+}
