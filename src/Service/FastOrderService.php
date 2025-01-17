@@ -37,7 +37,9 @@ class FastOrderService
                 'sessionId' => $item->getSessionId(),
                 'productNumber' => $item->getProductNumber(),
                 'quantity' => $item->getQuantity(),
-                'createdAt' => $item->getCreatedAt()
+                'customFields' => $item->getCustomFields(),
+                'createdAt' => $item->getCreatedAt(),
+                'updatedAt' => $item->getUpdatedAt()
             ]);
         }
 
@@ -56,9 +58,6 @@ class FastOrderService
                 'sessionId' => $sessionId,
                 'productNumber' => $order['productNumber'],
                 'quantity' => (int)$order['quantity'],
-                'customFields' => [
-                    'test_key' => 'test_value',
-                ],
                 'createdAt' => (new \DateTime())->format('Y-m-d H:i:s'),
             ];
         }
