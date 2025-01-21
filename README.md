@@ -1,4 +1,4 @@
-# Shopware 6.6 FastOrder Plugin form with admin area
+# Shopware 6.6 FastOrder Plugin form with Admin Area
 Created with Dockware 6.6.9.0
 
 With this plugin, you get a form the user can take to add up to 10 
