@@ -25,7 +25,7 @@ class FastOrderService
         $this->connection = $connection;
     }
 
-    public function getFastOrder(Criteria $criteria, Context $context): object
+    public function getFastOrder(Criteria $criteria, Context $context): array
     {
         $searchResult = $this->fastOrderRepository->search($criteria, $context);
 

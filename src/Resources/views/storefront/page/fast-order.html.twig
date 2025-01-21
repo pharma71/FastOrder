@@ -1,7 +1,7 @@
 {% sw_extends '@Storefront/storefront/base.html.twig' %}
 
 {% block base_content %}
-    <div class="container p-3 my-3 bg-primary text-white">
+    <div class="container p-3 my-3">
         <h1 class="text-center mb-4">Fast Order</h1>
         <form action="{{ path('frontend.fast_order_add') }}" method="POST" id="fast-order-form">
             <div class="row mb-3 product-row">
@@ -41,7 +41,7 @@
                 <strong>Total Sum:</strong> <span id="total-value">0.00</span>
             </div>
             <div class="d-flex justify-content-center mt-4">
-                <button type="submit" class="btn btn-secondary" 
+                <button type="submit" class="btn btn-primary" 
                         style="padding: 10px 20px; font-size: 16px;">
                     Add to Cart
                 </button>

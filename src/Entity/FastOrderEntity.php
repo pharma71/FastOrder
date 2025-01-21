@@ -30,7 +30,7 @@ class FastOrderEntity extends Entity
     #[Field(type: FieldType::DATETIME)]
     public $createdAt;
 
-    #[Field(type: FieldType::DATETIME)]
+    #[Field(type: FieldType::DATETIME|NULL)]
     public $updatedAt;
 
     public function getId(): string
@@ -83,12 +83,12 @@ class FastOrderEntity extends Entity
         $this->createdAt = $createdAt;
     }
 
-    public function getUpdatedAt(): \DateTimeInterface
+    public function getUpdatedAt(): \DateTimeInterface|null
     {
         return $this->updatedAt;
     }
 
-    public function setUpdatedAt(\DateTimeInterface $updatedAt): void
+    public function setUpdatedAt(\DateTimeInterface|null $updatedAt): void
     {
         $this->updatedAt = $updatedAt;
     }

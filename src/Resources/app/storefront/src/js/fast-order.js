@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('fast-order-form');
     const totalValueElement = document.getElementById('total-value');
+    document.title = "Shopware FastOrder"
 
     // Funktion zur Berechnung der Gesamtsumme
     const calculateTotal = () => {
