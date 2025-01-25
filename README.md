@@ -1,4 +1,4 @@
-# Shopware 6.6 FastOrder Plugin form with admin area
+# Shopware 6.6 FastOrder Plugin form with Admin Area
 Created with Dockware 6.6.9.0
 
 With this plugin, you get a form the user can take to add up to 10 
@@ -21,6 +21,7 @@ While adding products to the FastOrder form the total price is calculated.
 Only available products are added to the cart.
 
 The route is //your-host.de/fast-order
+
 
 Occupied slots are marked. The total amount is live calculated.
 
